@@ -10,4 +10,20 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Montserrat', system-ui, sans-serif;
     }
+
+
+    .card-service {
+        @apply bg-black/40 rounded-xl border border-white/10 transition w-full max-w-[380px] p-6 md:p-8
+        hover:border-brand-orange transition
+
+    }
+
+    .card-service h3 {
+        @apply text-xl font-semibold text-brand-orange;
+    }
+
+    .card-service p {
+        @apply mt-4 text-sm text-white/80;
+    }
+
 }
