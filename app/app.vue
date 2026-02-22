@@ -1,13 +1,15 @@
 <script setup>
 import { ref } from 'vue'
-
+import PhoneIcon from '~/assets/icons/phone.svg'
+import MailIcon from '~/assets/icons/mail.svg'
+import LieuIcon from '~/assets/icons/lieu.svg'
 const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
-    <header class="sticky top-0 z-50 bg-brand-darkSoft/95 backdrop-blur">
-      <div class="relative mx-auto max-w-8xl px-10 py-2 flex items-center justify-center md:justify-between text-brand-light">
+  <div class="min-h-screen flex flex-col bg-brand-dark">
+    <header class="sticky top-0 z-50 bg-brand-dark/80 backdrop-blur">
+      <div class="relative mx-auto max-w-8xl px-6 sm:px-8 lg:px-10 py-1 flex items-center justify-center md:justify-between text-brand-light">
 
 
 
@@ -18,26 +20,30 @@ const mobileMenuOpen = ref(false)
          md:flex-row md:items-center md:gap-5 md:text-left"
         >
           <img
-              src="/logo2.png"
+              src="/logo.svg"
               alt="HD Démolition"
-              class="h-[64px] w-auto md:h-[96px]"
+              class="h-[100px] w-auto md:h-[120px] xl:h-[160px]"
           />
 
-          <span class="font-extrabold tracking-wide leading-none text-xl md:text-3xl">
+          <span class="font-extrabold tracking-wide leading-none text-xl md:text-2xl xl:text-4xl">
     <span class="text-brand-orange">HD</span> DÉMOLITION
   </span>
         </NuxtLink>
 
         <!-- MOBILE : TEL + BURGER -->
-        <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 md:hidden">
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 lg:hidden">
 
 
-        <a
-              href="tel:0689537322"
-              class="flex items-center justify-center h-10 w-10 rounded-lg bg-black/20 text-brand-orange"
+          <a
+              href="tel:+33689537322"
+              class="flex items-center justify-center h-10 w-10 rounded-lg bg-black/20"
               aria-label="Appeler"
           >
-            📞
+            <img
+                :src="PhoneIcon"
+                alt=""
+                class="h-5 w-5"
+            />
           </a>
 
           <button
@@ -51,9 +57,9 @@ const mobileMenuOpen = ref(false)
         </div>
 
         <!-- BLOC DROIT : NAV + TEL -->
-        <div class="hidden md:flex items-center gap-10">
+        <div class="hidden lg:flex items-center gap-6 xl:gap-10">
 
-          <nav class="flex items-center gap-10 text-[20px] font-semibold">
+          <nav class="flex items-center gap-6 xl:gap-10 text-base xl:text-[22px] font-semibold">
             <NuxtLink
                 to="/"
                 class="hover:text-brand-orange transition"
@@ -89,10 +95,11 @@ const mobileMenuOpen = ref(false)
 
           <!-- Téléphone -->
           <a
-              href="tel:0689537322"
-              class="flex items-center gap-2 text-brand-orange font-semibold text-[20px]"
+              href="tel:+33689537322"
+              class="flex items-center gap-2 text-brand-orange font-semibold text-base xl:text-[22px] whitespace-nowrap"
           >
-            📞 06 89 53 73 22
+            <img :src="PhoneIcon" alt="" class="h-5 w-5" />
+            06 89 53 73 22
           </a>
 
         </div>
@@ -103,8 +110,8 @@ const mobileMenuOpen = ref(false)
 
 
       <!-- MENU MOBILE -->
-      <div v-if="mobileMenuOpen" class="md:hidden border-t border-white/10 bg-brand-darkSoft">
-        <nav class="mx-auto max-w-8xl px-6 py-8 grid grid-cols-2 gap-x-10 gap-y-6 place-items-center text-brand-light font-semibold text-center">
+      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-white/10 ">
+        <nav class="mx-auto max-w-sm px-6 py-4 flex flex-col items-center gap-6 text-brand-light font-semibold text-center">
 
         <NuxtLink
               to="/"
@@ -164,16 +171,36 @@ const mobileMenuOpen = ref(false)
           </div>
 
           <!-- Col 2 : Contact -->
-          <div class="md:border-l md:border-white/15 md:px-10 text-center flex flex-col items-center">
+          <div class="md:border-l md:border-white/15 md:px-10 text-center md:text-left flex flex-col items-center md:items-center">
             <h3 class="text-sm font-semibold tracking-wide text-white/90">CONTACT</h3>
-            <ul class="mt-4 space-y-3 text-sm text-white/70 flex flex-col items-center">
+
+            <ul class="mt-4 space-y-4 text-sm text-white/70 text-left max-w-xs mx-auto">
+
               <li>
-                <a class="hover:text-brand-orange" href="tel:0689537322">📞 06 89 53 73 22</a>
+                <a
+                    class="hover:text-brand-orange flex items-center gap-3"
+                    href="tel:+33689537322"
+                >
+                  <img :src="PhoneIcon" alt="" class="h-5 w-5 shrink-0" />
+                  06 89 53 73 22
+                </a>
               </li>
+
               <li>
-                <a class="hover:text-brand-orange" href="mailto:contact@hd-demolition.fr">✉️ contact@hd-demolition.fr</a>
+                <a
+                    class="hover:text-brand-orange flex items-center gap-3"
+                    href="mailto:contact@hd-demolition.fr"
+                >
+                  <img :src="MailIcon" alt="" class="h-5 w-5 shrink-0" />
+                  contact@hd-demolition.fr
+                </a>
               </li>
-              <li>📍 Chambéry</li>
+
+              <li class="flex items-center gap-3">
+                <img :src="LieuIcon" alt="" class="h-5 w-5 shrink-0" />
+                Chambéry
+              </li>
+
             </ul>
           </div>
 

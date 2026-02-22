@@ -13,17 +13,15 @@
 
 
     .card-service {
-        @apply bg-black/40 rounded-xl border border-white/10 transition w-full max-w-[380px] p-6 md:p-8
-        hover:border-brand-orange transition
-
+        @apply  w-full bg-black/40 rounded-xl border border-black/40 transition hover:border-brand-orange  p-6 xl:p-8;
     }
 
-    .card-service h3 {
-        @apply text-xl font-semibold text-brand-orange;
-    }
+    /*.card-service h3 {*/
+    /*    @apply text-xl font-semibold text-brand-orange;*/
+    /*}*/
 
     .card-service p {
-        @apply mt-4 text-sm text-white/80;
+        @apply mt-3 text-sm lg:text-base leading-relaxed text-white/80 pl-4  ;
     }
 
 }

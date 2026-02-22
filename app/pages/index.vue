@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full min-h-[90vh] overflow-hidden bg-brand-dark text-brand-light">
+  <section class="relative w-full min-h-[88vh] overflow-hidden bg-brand-dark text-brand-light">
 
   <!-- Background image -->
     <img
@@ -12,8 +12,8 @@
     <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent"></div>
 
     <!-- Content -->
-    <div class="relative mx-auto max-w-8xl px-10 py-16 md:py-24">
-      <div class="max-w-xl mt-10 md:mt-16 ml-4 md:ml-20">
+    <div class="relative mx-auto max-w-8xl px-6 sm:px-8 lg:px-10 py-14 sm:py-16 md:py-24">
+      <div class="max-w-xl mt-10 sm:mt-12 md:mt-16 ml-0 sm:ml-2 md:ml-20">
         <h1 class="font-extrabold leading-[1.05] text-4xl md:text-6xl">
           <span class="block">ENTREPRISE DE</span>
           <span class="block text-brand-orange">DÉMOLITION</span>
@@ -34,7 +34,7 @@
         <div class="mt-8">
           <NuxtLink
               to="/contact"
-              class="inline-flex items-center justify-center rounded-xl bg-brand-orange px-14 py-3 text-xl font-semibold text-white/85 hover:opacity-90 transition"
+              class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-brand-orange px-8 sm:px-14 py-3 text-base sm:text-xl font-semibold text-white/85 hover:opacity-90 transition"
           >
             DEMANDE DE DEVIS
           </NuxtLink>
@@ -44,7 +44,7 @@
   </section>
 
   <!-- SECTION SERVICE -->
-  <section class="bg-brand-darkSoft text-brand-light py-20">
+  <section class="bg-brand-darkSoft text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
 
       <!-- Titre -->
@@ -56,18 +56,18 @@
       </div>
 
       <!-- GRID UNIQUE -->
-      <div class="mt-14 grid gap-8 md:grid-cols-6">
+      <div class="mt-14 grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-6">
 
         <!-- 3 du haut -->
         <NuxtLink to="/services#demolition" class="card-service md:col-span-2">
-          <div class="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-4 mb-4 text-center md:text-left">
+          <div class="flex flex-col lg:flex-row items-center xl:items-center gap-3 lg:gap-4 mb-4 text-center lg:text-left">
 
           <img
                 src="~/assets/icons/boule.svg"
                 alt=""
-                class="h-14 md:h-20 w-auto"
+                class="h-14 xl:h-20 w-auto"
             />
-            <h3 class="text-lg md:text-xl font-semibold text-brand-orange">
+            <h3 class="text-lg xl:text-xl font-semibold text-brand-orange leading-tight">
               DÉMOLITION
             </h3>
           </div>
@@ -78,14 +78,14 @@
         </NuxtLink>
 
         <NuxtLink to="/services#terrassement" class="card-service md:col-span-2">
-          <div class="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-4 mb-4 text-center md:text-left">
+          <div class="flex flex-col lg:flex-row items-center xl:items-center gap-3 lg:gap-4 mb-4 text-center lg:text-left">
 
           <img
                 src="~/assets/icons/pelle.svg"
                 alt="Icône terrassement"
-                class="h-14 md:h-20 w-auto"
+                class="h-14 xl:h-20 w-auto"
             />
-            <h3 class="text-xl font-semibold text-brand-orange">
+            <h3 class="text-lg xl:text-xl font-semibold text-brand-orange leading-tight">
               TERRASSEMENT
             </h3>
           </div>
@@ -96,14 +96,14 @@
         </NuxtLink>
 
         <NuxtLink to="/services#dallage" class="card-service md:col-span-2">
-          <div class="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-4 mb-4 text-center md:text-left">
+          <div class="flex flex-col lg:flex-row items-center xl:items-center gap-3 lg:gap-4 mb-4 text-center lg:text-left">
 
           <img
                 src="~/assets/icons/toupi.svg"
                 alt="Icône dallage béton"
-                class="h-14 md:h-20 w-auto"
+                class="h-14 xl:h-20 w-auto"
             />
-            <h3 class="text-xl font-semibold text-brand-orange">
+            <h3 class="text-lg xl:text-xl font-semibold text-brand-orange leading-tight">
               DALLAGE BÉTON
             </h3>
           </div>
@@ -115,14 +115,14 @@
 
         <!-- 2 du bas -->
         <NuxtLink to="/services#bennes" class="card-service md:col-span-2 md:col-start-2">
-          <div class="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-4 mb-4 text-center md:text-left">
+          <div class="flex flex-col lg:flex-row items-center xl:items-center gap-3 lg:gap-4 mb-4 text-center lg:text-left">
 
           <img
                 src="~/assets/icons/benne.svg"
                 alt="Icône location de bennes"
-                class="h-14 md:h-20 w-auto"
+                class="h-14 xl:h-20 w-auto"
             />
-            <h3 class="text-xl font-semibold text-brand-orange">
+            <h3 class="text-lg xl:text-xl font-semibold text-brand-orange leading-tight">
               LOCATION DE BENNES
             </h3>
           </div>
@@ -133,14 +133,14 @@
         </NuxtLink>
 
         <NuxtLink to="/services#gravats" class="card-service md:col-span-2">
-          <div class="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-4 mb-4 text-center md:text-left">
+          <div class="flex flex-col lg:flex-row items-center xl:items-center gap-3 lg:gap-4 mb-4 text-center lg:text-left">
 
           <img
                 src="~/assets/icons/camion-gravat.svg"
                 alt="Icône évacuation de gravats"
-                class="h-14 md:h-20 w-auto"
+                class="h-14 xl:h-20 w-auto"
             />
-            <h3 class="text-xl font-semibold text-brand-orange">
+            <h3 class="text-lg xl:text-xl font-semibold text-brand-orange leading-tight">
               ÉVACUATION DE GRAVATS
             </h3>
           </div>
@@ -164,7 +164,7 @@
   </section>
 
   <!-- SECTION POURQUOI NOUS CHOISIR -->
-  <section class="bg-brand-dark text-brand-light py-20">
+  <section class="bg-brand-dark text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
 
       <!-- Titre -->
@@ -183,45 +183,35 @@
       </p>
 
       <!-- Liste -->
-      <ul class="mt-12 space-y-6 w-full flex justify-center">
-        <div class="space-y-6 text-left">
-
+      <div class="mt-12 flex justify-center px-2 sm:px-0">
+        <ul class="space-y-6 text-left max-w-md w-full">
           <li class="flex items-center gap-4">
             <img src="~/assets/icons/check.svg" alt="" class="h-6 w-6 shrink-0" />
-            <span class="text-lg font-semibold text-white/90">
-        Intervention rapide
-      </span>
+            <span class="text-base sm:text-lg font-semibold text-white/90">Intervention rapide</span>
           </li>
 
           <li class="flex items-center gap-4">
             <img src="~/assets/icons/check.svg" alt="" class="h-6 w-6 shrink-0" />
-            <span class="text-lg font-semibold text-white/90">
-        Devis gratuit et sans engagement
-      </span>
+            <span class="text-base sm:text-lg font-semibold text-white/90">Devis gratuit et sans engagement</span>
           </li>
 
           <li class="flex items-center gap-4">
             <img src="~/assets/icons/check.svg" alt="" class="h-6 w-6 shrink-0" />
-            <span class="text-lg font-semibold text-white/90">
-        Chantiers propres et sécurisés
-      </span>
+            <span class="text-base sm:text-lg font-semibold text-white/90">Chantiers propres et sécurisés</span>
           </li>
 
           <li class="flex items-center gap-4">
             <img src="~/assets/icons/check.svg" alt="" class="h-6 w-6 shrink-0" />
-            <span class="text-lg font-semibold text-white/90">
-        Évacuation des gravats en centre agréé
-      </span>
+            <span class="text-base sm:text-lg font-semibold text-white/90">Évacuation des gravats en centre agréé</span>
           </li>
-
-        </div>
-      </ul>
+        </ul>
+      </div>
 
 
     </div>
   </section>
   <!-- SECTION NOS REALISATIONS -->
-  <section class="bg-brand-darkSoft text-brand-light py-24">
+  <section class="bg-brand-darkSoft text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
 
       <!-- Titre -->
@@ -238,7 +228,7 @@
       <!-- Chantier 1 -->
       <div class="mt-16">
         <h3 class="text-xl font-semibold mb-6 text-center text-white/90">
-          Terrassement cour privée
+          Création d’une cour stabilisée et drainée
         </h3>
 
         <div class="grid gap-6 md:grid-cols-2">
@@ -248,7 +238,7 @@
             <img
                 src="/photos/avant1.jpg"
                 alt="Avant terrassement cour"
-                class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+                class="w-full h-64 sm:h-72 md:h-80 object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
             />
 
@@ -262,7 +252,7 @@
             <img
                 src="/photos/apres1.jpg"
                 alt="Après terrassement cour"
-                class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+                class="w-full h-64 sm:h-72 md:h-80 object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
             />
 
@@ -277,7 +267,7 @@
       <!-- Chantier 2 -->
       <div class="mt-20">
         <h3 class="text-xl font-semibold mb-6 text-center text-white/90">
-          Préparation terrain
+          Du terrain en friche à une plateforme prête à aménager
         </h3>
 
         <div class="grid gap-6 md:grid-cols-2">
@@ -287,7 +277,7 @@
             <img
                 src="/photos/avant2.jpg"
                 alt="Avant préparation terrain"
-                class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+                class="w-full h-64 sm:h-72 md:h-80 object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
             />
 
@@ -301,7 +291,7 @@
             <img
                 src="/photos/apres2.jpg"
                 alt="Après préparation terrain"
-                class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+                class="w-full h-64 sm:h-72 md:h-80 object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
             />
 
@@ -313,6 +303,45 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- SECTION CTA DEVIS -->
+  <section class="bg-brand-dark text-brand-light py-16 sm:py-20 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center">
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+          BESOIN D’UN <span class="text-brand-orange">DEVIS</span> RAPIDE ?
+        </h2>
+
+        <div class="mt-4 mx-auto h-1.5 w-28 bg-gradient-to-r from-brand-orange to-black/60"></div>
+
+        <p class="mt-8 text-white/80 max-w-2xl mx-auto leading-relaxed">
+          Contactez <span class="text-brand-orange font-semibold">HD DÉMOLITION</span> pour une étude gratuite et sans engagement.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center gap-4">
+          <NuxtLink
+              to="/contact"
+              class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-brand-orange px-10 py-3 text-base sm:text-lg font-semibold text-white/85 hover:opacity-90 transition"
+          >
+            DEMANDE DE DEVIS
+          </NuxtLink>
+
+          <a
+              href="tel:+33689537322"
+              class="inline-flex items-center gap-2 text-white/90 hover:text-brand-orange transition font-semibold"
+              aria-label="Appeler le 06 89 53 73 22"
+          >
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange/15">
+            <img src="~/assets/icons/phone.svg" alt="" class="h-7 w-7 rounded-full" />
+          </span>
+            06 89 53 73 22
+          </a>
+        </div>
+
+      </div>
     </div>
   </section>
 
