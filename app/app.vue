@@ -9,7 +9,7 @@ const mobileMenuOpen = ref(false)
 <template>
   <div class="min-h-screen flex flex-col bg-brand-dark">
     <header class="sticky top-0 z-50 bg-brand-dark/80 backdrop-blur">
-      <div class="relative mx-auto max-w-8xl px-6 sm:px-8 lg:px-10 py-1 flex items-center justify-center md:justify-between text-brand-light">
+      <div class="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 py-1 flex items-center justify-center md:justify-between text-brand-light">
 
 
 
@@ -22,7 +22,7 @@ const mobileMenuOpen = ref(false)
           <img
               src="/logo.svg"
               alt="HD Démolition"
-              class="h-[100px] w-auto md:h-[120px] xl:h-[160px]"
+              class="h-[100px] w-auto md:h-[120px] xl:h-[140px]"
           />
 
           <span class="font-extrabold tracking-wide leading-none text-xl md:text-2xl xl:text-4xl">
@@ -153,13 +153,13 @@ const mobileMenuOpen = ref(false)
     </main>
 
     <footer class="bg-brand-darkSoft text-brand-light border-t border-white/10">
-      <div class="mx-auto max-w-8xl px-10 py-12">
+      <div class="mx-auto max-w-7xl px-10 py-12">
         <div class="grid gap-10 md:grid-cols-3 md:gap-0">
 
           <!-- Col 1 : Marque -->
           <div class="text-center flex flex-col items-center">
             <div class="flex items-center gap-4 justify-center">
-              <img src="/logo2.png" alt="HD Démolition" class="h-14 w-auto" />
+              <img src="/logo3.png" alt="HD Démolition" class="h-14 w-auto" />
               <div class="font-extrabold text-lg leading-tight">
                 <span class="text-brand-orange">HD</span> DÉMOLITION
               </div>

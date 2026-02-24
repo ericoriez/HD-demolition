@@ -1,43 +1,100 @@
-<template>
-  <section class="relative w-full min-h-[88vh] overflow-hidden bg-brand-dark text-brand-light">
+<script setup>
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ConstructionCompany",
+  "name": "HD Démolition",
+  "url": "https://hd-demolition.fr/",
+  "logo": "https://hd-demolition.fr/logo.svg",
+  "image": "https://hd-demolition.fr/HERO.webp",
+  "telephone": "+33689537322",
+  "email": "contact@hd-demolition.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chambéry",
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Savoie" },
+    { "@type": "AdministrativeArea", "name": "Haute-Savoie" },
+    { "@type": "AdministrativeArea", "name": "Ain" },
+    { "@type": "AdministrativeArea", "name": "Isère" }
+  ],
+  "description": "Entreprise de démolition, terrassement et dallage béton. Location de bennes et évacuation de gravats. Intervention en Savoie, Haute-Savoie, Ain et Isère. Devis gratuit.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Démolition" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terrassement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dallage béton" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Location de bennes" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Évacuation de gravats" } }
+    ]
+  }
+}
 
-  <!-- Background image -->
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(jsonLd)
+    }
+  ]
+})
+</script>
+
+<template>
+  <section class="relative w-full
+  min-h-[55vh]
+  sm:min-h-[70vh]
+  lg:min-h-[88vh]
+  bg-black overflow-hidden text-brand-light">
     <img
-        src="/HERO.png"
+        src="/HERO.webp"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover"
+        width="1440"
+        height="650"
+        class="absolute inset-0 h-full w-full
+         object-contain
+         sm:object-cover sm:object-[60%_center]
+         lg:object-center"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
     />
 
-    <!-- Overlay + dégradé gauche -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25 sm:from-black/85 sm:via-black/60 lg:to-transparent"></div>
+    <div class="relative mx-auto max-w-7xl
+  px-6 sm:px-8 lg:px-10
+  py-1 sm:py-1 md:py-1 lg:py-1">
+      <div class="min-h-[54vh] max-[360px]:min-h-[54vh] sm:min-h-[72vh] lg:min-h-[88vh] flex items-center">
+        <div class="max-w-xl w-full ml-0 sm:ml-2 lg:ml-20">
+          <h1 class="font-extrabold leading-[1.05] text-[32px] sm:text-4xl md:text-5xl xl:text-6xl">
+            <span class="block">ENTREPRISE DE</span>
+            <span class="block text-brand-orange">DÉMOLITION</span>
+            <span class="block">&amp;</span>
+            <span class="block text-brand-orange break-words">TERRASSEMENT</span>
+          </h1>
 
-    <!-- Content -->
-    <div class="relative mx-auto max-w-8xl px-6 sm:px-8 lg:px-10 py-14 sm:py-16 md:py-24">
-      <div class="max-w-xl mt-10 sm:mt-12 md:mt-16 ml-0 sm:ml-2 md:ml-20">
-        <h1 class="font-extrabold leading-[1.05] text-4xl md:text-6xl">
-          <span class="block">ENTREPRISE DE</span>
-          <span class="block text-brand-orange">DÉMOLITION</span>
-          <span class="block">&amp;</span>
-          <span class="block text-brand-orange">TERRASSEMENT</span>
-        </h1>
+          <div class="mt-6 h-1.5 w-1/2 bg-gradient-to-r from-brand-orange to-black/60"></div>
 
-        <div class="mt-6 h-1.5 w-1/2 bg-gradient-to-r from-brand-orange to-black/60"></div>
+          <p class="mt-6 text-sm sm:text-base lg:text-2xl font-semibold text-white/90">
+            Démolition • Terrassement • Dallage
+          </p>
 
-        <p class="mt-6 text-sm md:text-2xl font-semibold text-white/90">
-          Démolition • Terrassement • Dallage
-        </p>
+          <p class="mt-2 text-sm sm:text-base lg:text-2xl font-semibold text-white/85">
+            Location de bennes • Évacuation de gravats
+          </p>
 
-        <p class="mt-2 text-sm md:text-2xl font-semibold text-white/85">
-          Location de bennes • Évacuation de gravats
-        </p>
-
-        <div class="mt-8">
-          <NuxtLink
-              to="/contact"
-              class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-brand-orange px-8 sm:px-14 py-3 text-base sm:text-xl font-semibold text-white/85 hover:opacity-90 transition"
-          >
-            DEMANDE DE DEVIS
-          </NuxtLink>
+          <div class="mt-8">
+            <NuxtLink
+                to="/contact"
+                class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-brand-orange px-8 sm:px-14 py-3 text-base sm:text-xl font-semibold text-white/85 hover:opacity-90 transition"
+            >
+              DEMANDE DE DEVIS
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -210,6 +267,7 @@
 
     </div>
   </section>
+
   <!-- SECTION NOS REALISATIONS -->
   <section class="bg-brand-darkSoft text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
@@ -242,7 +300,7 @@
                 loading="lazy"
             />
 
-            <span class="absolute top-3 left-3 bg-brand-orange text-black font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
+            <span class="absolute top-3 left-3 bg-brand-orange text-white font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
             AVANT
           </span>
           </div>
@@ -256,7 +314,7 @@
                 loading="lazy"
             />
 
-            <span class="absolute top-3 left-3 bg-brand-orange text-black font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
+            <span class="absolute top-3 left-3 bg-brand-orange text-white font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
             APRÈS
           </span>
           </div>
@@ -281,7 +339,7 @@
                 loading="lazy"
             />
 
-            <span class="absolute top-3 left-3 bg-brand-orange text-black font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
+            <span class="absolute top-3 left-3 bg-brand-orange text-white font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
             AVANT
           </span>
           </div>
@@ -295,7 +353,7 @@
                 loading="lazy"
             />
 
-            <span class="absolute top-3 left-3 bg-brand-orange text-black font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
+            <span class="absolute top-3 left-3 bg-brand-orange text-white font-bold text-xs md:text-sm px-4 py-1.5 rounded-md shadow-lg">
             APRÈS
           </span>
           </div>

@@ -3,25 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'Inter', system-ui, sans-serif;
-    }
+    html { font-family: 'Inter', system-ui, sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', system-ui, sans-serif; }
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', system-ui, sans-serif;
-    }
-
-
+@layer components {
     .card-service {
-        @apply  w-full bg-black/40 rounded-xl border border-black/40 transition hover:border-brand-orange  p-6 xl:p-8;
+        @apply w-full bg-black/40 rounded-xl border border-black/40 transition hover:border-brand-orange p-6 xl:p-8;
     }
-
-    /*.card-service h3 {*/
-    /*    @apply text-xl font-semibold text-brand-orange;*/
-    /*}*/
 
     .card-service p {
-        @apply mt-3 text-sm lg:text-base leading-relaxed text-white/80 pl-4  ;
+        @apply mt-3 text-sm lg:text-base leading-relaxed text-white/80 pl-4;
     }
-
 }
