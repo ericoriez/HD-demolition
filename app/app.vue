@@ -9,91 +9,75 @@ const mobileMenuOpen = ref(false)
 <template>
   <div class="min-h-screen flex flex-col bg-brand-dark">
     <header class="sticky top-0 z-50 bg-brand-dark/80 backdrop-blur">
-      <div class="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 py-1 flex items-center justify-center md:justify-between text-brand-light">
+      <!-- MOBILE/TABLET : 3 zones -->
+      <!-- DESKTOP (lg+) : layout original logo gauche + nav droite -->
+      <div
+          class="w-full px-6 sm:px-8 lg:px-10 py-1 text-brand-light
+           grid grid-cols-3 items-center
+           lg:flex lg:items-center lg:justify-between"
+      >
+        <!-- Zone gauche (vide sur mobile) -->
+        <div class="lg:hidden"></div>
 
-
-
-      <!-- BLOC GAUCHE : LOGO -->
+        <!-- BLOC LOGO  -->
         <NuxtLink
             to="/"
             class="flex flex-col items-center gap-1 text-center
-         md:flex-row md:items-center md:gap-5 md:text-left"
+             md:flex-row md:items-center md:gap-5 md:text-left
+             justify-self-center lg:justify-self-auto"
         >
           <img
               src="/logo.svg"
               alt="HD Démolition"
-              class="h-[100px] w-auto md:h-[120px] xl:h-[140px]"
+              class="h-20 md:h-[120px] xl:h-[140px] w-auto"
           />
 
           <span class="font-extrabold tracking-wide leading-none text-xl md:text-2xl xl:text-4xl">
-    <span class="text-brand-orange">HD</span> DÉMOLITION
-  </span>
+        <span class="text-brand-orange">HD</span> DÉMOLITION
+      </span>
         </NuxtLink>
 
-        <!-- MOBILE : TEL + BURGER -->
-        <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 lg:hidden">
-
-
+        <!-- MOBILE : TEL + BURGER  -->
+        <div class="flex flex-col items-center gap-3 justify-self-end lg:hidden">
           <a
               href="tel:+33689537322"
               class="flex items-center justify-center h-10 w-10 rounded-lg bg-black/20"
               aria-label="Appeler"
           >
-            <img
-                :src="PhoneIcon"
-                alt=""
-                class="h-5 w-5"
-            />
+            <img :src="PhoneIcon" alt="" class="h-5 w-5" />
           </a>
 
           <button
               type="button"
               class="flex items-center justify-center h-10 w-10 rounded-lg bg-black/20 text-brand-light"
               aria-label="Ouvrir le menu"
+              :aria-expanded="mobileMenuOpen"
               @click="mobileMenuOpen = !mobileMenuOpen"
           >
             ☰
           </button>
         </div>
 
-        <!-- BLOC DROIT : NAV + TEL -->
+        <!-- DESKTOP : NAV + TEL -->
         <div class="hidden lg:flex items-center gap-6 xl:gap-10">
-
           <nav class="flex items-center gap-6 xl:gap-10 text-base xl:text-[22px] font-semibold">
-            <NuxtLink
-                to="/"
-                class="hover:text-brand-orange transition"
-                active-class="text-brand-orange"
-            >
+            <NuxtLink to="/" class="hover:text-brand-orange transition" active-class="text-brand-orange">
               Accueil
             </NuxtLink>
 
-            <NuxtLink
-                to="/services"
-                class="hover:text-brand-orange transition"
-                active-class="text-brand-orange"
-            >
+            <NuxtLink to="/services" class="hover:text-brand-orange transition" active-class="text-brand-orange">
               Services
             </NuxtLink>
 
-            <NuxtLink
-                to="/a-propos"
-                class="hover:text-brand-orange transition"
-                active-class="text-brand-orange"
-            >
+            <NuxtLink to="/a-propos" class="hover:text-brand-orange transition" active-class="text-brand-orange">
               À propos
             </NuxtLink>
 
-            <NuxtLink
-                to="/contact"
-                class="hover:text-brand-orange transition"
-                active-class="text-brand-orange"
-            >
+            <NuxtLink to="/contact" class="hover:text-brand-orange transition" active-class="text-brand-orange">
               Contact
             </NuxtLink>
           </nav>
 
-          <!-- Téléphone -->
           <a
               href="tel:+33689537322"
               class="flex items-center gap-2 text-brand-orange font-semibold text-base xl:text-[22px] whitespace-nowrap"
@@ -101,49 +85,16 @@ const mobileMenuOpen = ref(false)
             <img :src="PhoneIcon" alt="" class="h-5 w-5" />
             06 89 53 73 22
           </a>
-
         </div>
-
       </div>
 
-
-
-
       <!-- MENU MOBILE -->
-      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-white/10 ">
+      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-white/10">
         <nav class="mx-auto max-w-sm px-6 py-4 flex flex-col items-center gap-6 text-brand-light font-semibold text-center">
-
-        <NuxtLink
-              to="/"
-              class="hover:text-brand-orange"
-              @click="mobileMenuOpen = false"
-          >
-            Accueil
-          </NuxtLink>
-
-          <NuxtLink
-              to="/services"
-              class="hover:text-brand-orange"
-              @click="mobileMenuOpen = false"
-          >
-            Services
-          </NuxtLink>
-
-          <NuxtLink
-              to="/a-propos"
-              class="hover:text-brand-orange"
-              @click="mobileMenuOpen = false"
-          >
-            À propos
-          </NuxtLink>
-
-          <NuxtLink
-              to="/contact"
-              class="hover:text-brand-orange"
-              @click="mobileMenuOpen = false"
-          >
-            Contact
-          </NuxtLink>
+          <NuxtLink to="/" class="hover:text-brand-orange" @click="mobileMenuOpen = false">Accueil</NuxtLink>
+          <NuxtLink to="/services" class="hover:text-brand-orange" @click="mobileMenuOpen = false">Services</NuxtLink>
+          <NuxtLink to="/a-propos" class="hover:text-brand-orange" @click="mobileMenuOpen = false">À propos</NuxtLink>
+          <NuxtLink to="/contact" class="hover:text-brand-orange" @click="mobileMenuOpen = false">Contact</NuxtLink>
         </nav>
       </div>
     </header>

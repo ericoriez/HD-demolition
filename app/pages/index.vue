@@ -52,7 +52,7 @@ useHead({
   bg-black overflow-hidden text-brand-light">
     <img
         src="/HERO.webp"
-        alt=""
+        alt="Chantier de démolition et terrassement – HD Démolition"
         width="1440"
         height="650"
         class="absolute inset-0 h-full w-full
@@ -70,7 +70,7 @@ useHead({
   py-1 sm:py-1 md:py-1 lg:py-1">
       <div class="min-h-[54vh] max-[360px]:min-h-[54vh] sm:min-h-[72vh] lg:min-h-[88vh] flex items-center">
         <div class="max-w-xl w-full ml-0 sm:ml-2 lg:ml-20">
-          <h1 class="font-extrabold leading-[1.05] text-[32px] sm:text-4xl md:text-5xl xl:text-6xl">
+          <h1 class="font-extrabold leading-[1.05] text-2xl sm:text-3xl md:text-5xl xl:text-6xl">
             <span class="block">ENTREPRISE DE</span>
             <span class="block text-brand-orange">DÉMOLITION</span>
             <span class="block">&amp;</span>
@@ -83,7 +83,7 @@ useHead({
             Démolition • Terrassement • Dallage
           </p>
 
-          <p class="mt-2 text-sm sm:text-base lg:text-2xl font-semibold text-white/85">
+          <p class="mt-2 text-sm sm:text-base lg:text-2xl font-semibold text-white/90">
             Location de bennes • Évacuation de gravats
           </p>
 
@@ -106,10 +106,15 @@ useHead({
 
       <!-- Titre -->
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold">
-          NOS <span class="text-brand-orange">SERVICES</span>
-        </h2>
-        <div class="mt-4 mx-auto h-1.5 w-28 bg-gradient-to-r from-brand-orange to-black/60"></div>
+        <div class="inline-block">
+
+          <h2 class="text-2xl md:text-4xl font-extrabold">
+            NOS <span class="text-brand-orange">SERVICES</span>
+          </h2>
+
+          <div class="mt-4 h-1.5 w-full bg-gradient-to-r from-brand-orange via-brand-dark/50 to-brand-darkSoft"></div>
+
+        </div>
       </div>
 
       <!-- GRID UNIQUE -->
@@ -226,10 +231,15 @@ useHead({
 
       <!-- Titre -->
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold">
-          POURQUOI <span class="text-brand-orange">NOUS CHOISIR</span>
-        </h2>
-        <div class="mt-4 mx-auto h-1.5 w-28 bg-gradient-to-r from-brand-orange to-black/60"></div>
+        <div class="inline-block">
+
+          <h2 class="text-2xl md:text-4xl font-extrabold">
+            POURQUOI <span class="text-brand-orange">NOUS CHOISIR</span>
+          </h2>
+
+          <div class="mt-4 h-1.5 w-full bg-gradient-to-r from-brand-orange via-brand-dark/50 to-brand-dark/60"></div>
+
+        </div>
       </div>
 
       <!-- Texte -->
@@ -274,11 +284,17 @@ useHead({
 
       <!-- Titre -->
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold">
-          NOS <span class="text-brand-orange">RÉALISATIONS</span>
-        </h2>
-        <div class="mt-4 mx-auto h-1.5 w-28 bg-gradient-to-r from-brand-orange to-black/60"></div>
-        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+        <div class="inline-block">
+
+          <h2 class="text-2xl md:text-4xl font-extrabold">
+            NOS <span class="text-brand-orange">RÉALISATIONS</span>
+          </h2>
+
+          <div class="mt-4 h-1.5 w-full bg-gradient-to-r from-brand-orange via-brand-dark/50 to-brand-darkSoft"></div>
+
+        </div>
+
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
           Exemples de chantiers réalisés.
         </p>
       </div>
@@ -369,14 +385,19 @@ useHead({
     <div class="mx-auto max-w-7xl px-6">
       <div class="text-center">
 
-        <h2 class="text-3xl md:text-4xl font-extrabold">
-          BESOIN D’UN <span class="text-brand-orange">DEVIS</span> RAPIDE ?
-        </h2>
+        <div class="inline-block">
 
-        <div class="mt-4 mx-auto h-1.5 w-28 bg-gradient-to-r from-brand-orange to-black/60"></div>
+          <h2 class="text-2xl md:text-4xl font-extrabold">
+            BESOIN D’UN <span class="text-brand-orange">DEVIS</span> RAPIDE ?
+          </h2>
 
-        <p class="mt-8 text-white/80 max-w-2xl mx-auto leading-relaxed">
-          Contactez <span class="text-brand-orange font-semibold">HD DÉMOLITION</span> pour une étude gratuite et sans engagement.
+          <div class="mt-4 h-1.5 w-full bg-gradient-to-r from-brand-orange via-brand-dark/50 to-brand-dark/60"></div>
+
+        </div>
+
+        <p class="mt-8 text-white/80 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg">
+          Contactez <span class="text-brand-orange font-semibold">HD DÉMOLITION</span>
+          pour une étude gratuite et sans engagement.
         </p>
 
         <div class="mt-10 flex flex-col items-center gap-4">
@@ -392,9 +413,9 @@ useHead({
               class="inline-flex items-center gap-2 text-white/90 hover:text-brand-orange transition font-semibold"
               aria-label="Appeler le 06 89 53 73 22"
           >
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange/15">
-            <img src="~/assets/icons/phone.svg" alt="" class="h-7 w-7 rounded-full" />
-          </span>
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange/15">
+        <img src="~/assets/icons/phone.svg" alt="" class="h-7 w-7 rounded-full" />
+      </span>
             06 89 53 73 22
           </a>
         </div>
