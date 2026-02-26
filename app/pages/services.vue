@@ -128,10 +128,15 @@ useHead({
         </div>
 
         <p class="mt-8 text-white/80 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg">
-          <span class="text-brand-orange font-semibold">HD Démolition</span> est basée à
-          <strong>Chambéry</strong> et intervient en <strong>Savoie (73)</strong> ainsi qu’en
-          <strong>Haute-Savoie (74)</strong>, <strong>Ain (01)</strong> et <strong>Isère (38)</strong> selon les chantiers.
-          Nous réalisons des prestations propres, sécurisées et adaptées aux contraintes d’accès et de terrain.
+          Nous réalisons des travaux de <strong>démolition</strong>, <strong>terrassement</strong> et
+          <strong>dallage béton</strong> à Chambéry et en Savoie, pour particuliers et professionnels.
+          Chaque intervention est étudiée selon l’accès, le volume et les contraintes du terrain.
+        </p>
+
+        <p class="mt-4 text-white/80 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg">
+          Nous assurons également la <strong>pose de bennes pour gravats et déchets de chantier</strong>,
+          avec organisation du dépôt et de la reprise. Objectif : un chantier maîtrisé, propre et prêt à
+          poursuivre les travaux dans de bonnes conditions.
         </p>
 
         <div class="mt-10 flex flex-wrap justify-center gap-3">
