@@ -1,9 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
+  ],
+
   pages: true,
+
   css: ['./assets/css/main.css'],
+
+  sitemap: {
+    siteUrl: 'https://hd-demolition.fr'
+  },
+
+  robots: {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/'
+      }
+    ],
+    sitemap: 'https://hd-demolition.fr/sitemap.xml'
+  },
 
   app: {
     head: {
@@ -25,7 +46,8 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@600;700;800&display=swap'
+          href:
+              'https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@600;700;800&display=swap'
         }
       ]
     }
