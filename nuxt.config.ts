@@ -10,20 +10,6 @@ export default defineNuxtConfig({
 
   css: ['./assets/css/main.css'],
 
-  sitemap: {
-    siteUrl: 'https://hd-demolition.fr'
-  },
-
-  robots: {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/'
-      }
-    ],
-    sitemap: 'https://hd-demolition.fr/sitemap.xml'
-  },
-
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
