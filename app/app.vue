@@ -116,7 +116,7 @@ useHead({
           <!-- Col 1 : Marque -->
           <div class="text-center flex flex-col items-center">
             <div class="flex items-center gap-4 justify-center">
-              <img src="/logo3.png" alt="HD Démolition" class="h-14 w-auto" />
+              <img src="/logo.svg" alt="HD Démolition" class="h-14 w-auto" />
               <div class="font-extrabold text-lg leading-tight">
                 <span class="text-brand-orange">HD</span> DÉMOLITION
               </div>
