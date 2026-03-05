@@ -4,6 +4,12 @@ import PhoneIcon from '~/assets/icons/phone.svg'
 import MailIcon from '~/assets/icons/mail.svg'
 import LieuIcon from '~/assets/icons/lieu.svg'
 const mobileMenuOpen = ref(false)
+
+useHead({
+  link: [
+    { rel: 'icon', href: '/logo.svg' }
+  ]
+})
 </script>
 
 <template>

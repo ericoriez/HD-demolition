@@ -1,8 +1,8 @@
 <script setup>
-const phone = '+33689537322'
+
 const siteUrl = 'https://hd-demolition.fr/'
 
-/** JSON-LD Entreprise (tu as déjà un schema sur index, ici on le remet car page services = importante SEO) */
+/** JSON-LD important SEO) */
 const businessLd = {
   "@context": "https://schema.org",
   "@type": "ConstructionCompany",

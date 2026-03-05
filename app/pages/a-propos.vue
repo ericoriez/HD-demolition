@@ -1,3 +1,24 @@
+<script setup>
+const siteUrl = 'https://hd-demolition.fr/'
+const canonical = `${siteUrl}a-propos`
+
+useHead({
+  title: 'À propos – Entreprise de Démolition & Terrassement à Chambéry | HD Démolition',
+  meta: [
+    {
+      name: 'description',
+      content:
+          "Découvrez HD Démolition : entreprise locale basée à Chambéry (Savoie). Démolition, terrassement, dallage béton, bennes et évacuation de gravats. Intervention 73/74/01/38 selon chantier.",
+    },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'À propos – HD Démolition (Chambéry / Savoie)' },
+    { property: 'og:description', content: 'Entreprise locale à Chambéry : démolition, terrassement, dallage béton, bennes et gravats. Devis gratuit.' },
+    { property: 'og:url', content: canonical },
+  ],
+  link: [{ rel: 'canonical', href: canonical }],
+})
+</script>
+
 <template>
   <!-- HERO / INTRO -->
   <section class="bg-brand-dark text-brand-light py-16 sm:py-20 md:py-24">

@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { reactive, ref, computed } from "vue"
 
-const phone = "+33689537322"
 const phoneHref = "tel:+33689537322"
-const emailTemp = "contact@hd-demolition.fr"
 const WEB3FORMS_KEY = "4f141169-fbd6-44a9-aba2-a8f76104cb5a"
-
 const siteUrl = "https://hd-demolition.fr/"
-
 const canonical = `${siteUrl}contact`
 
 const chantierOptions = [
@@ -186,11 +182,10 @@ useHead({
     </div>
   </section>
 
-  <!-- FORMULAIRE + RASSURANCE -->
+  <!-- FORMULAIRE  -->
   <section class="bg-brand-darkSoft text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        <!-- RASSURANCE (style card services) -->
         <div class="lg:col-span-5">
           <div class="rounded-xl border border-white/10 bg-black/20 p-6 md:p-8">
             <div class="text-center">
@@ -240,7 +235,7 @@ useHead({
             </div>
 
             <p class="mt-8 text-white/80 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base lg:text-lg">
-              Formulaire simple (1 minute). Indiquez votre besoin et on vous recontacte rapidement.
+              Indiquez votre besoin et on vous recontacte rapidement.
             </p>
 
 
@@ -346,7 +341,7 @@ useHead({
                         @input="resetStatus"
                     ></textarea>
                     <p class="mt-1 text-xs text-white/60">
-                      Minimum 10 caractères
+                      Minimum 10 caractères.
                     </p>
                   </div>
                 </div>
@@ -379,12 +374,6 @@ useHead({
                     <span v-else>ENVOYER</span>
                   </button>
 
-                  <a
-                      :href="phoneHref"
-                      class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 sm:px-14 py-3 text-base sm:text-xl font-semibold hover:bg-white/10 transition"
-                  >
-                    APPELER
-                  </a>
                 </div>
 
                 <!-- STATUS -->
@@ -412,7 +401,7 @@ useHead({
     </div>
   </section>
 
-  <!-- CTA BAS (même esprit que services) -->
+  <!-- CTA BAS  -->
   <section class="bg-brand-dark text-brand-light py-16 sm:py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-6">
       <div class="text-center">
